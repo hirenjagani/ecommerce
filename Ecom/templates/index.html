@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block content %}
+
+
+{% if request.user.is_authenticated %}
+<div>
+    Hi {{ user.username }}!
+
+
+</div>
+{% endif %}
+<div class="container">
+    <a href="{% url 'productlist' %}"><img src="{% static 'img/ecom.png'%}" class="image-fluid" height="500" width="1000"/></a>
+</div>
+{% endblock %}
+
